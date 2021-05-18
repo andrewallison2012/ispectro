@@ -1,0 +1,1325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1169</width>
+    <height>803</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>690</width>
+    <height>803</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1920</width>
+    <height>1080</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>ispectro</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="statusTip">
+    <string>Hover Over Things to See Info Here</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_17">
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Port Settings</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="0">
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="serial_port_QLineEdit">
+               <property name="text">
+                <string>/dev/ttyACM0</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" alignment="Qt::AlignRight">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Port:</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_12">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="connect_pushButton">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>200</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>connect</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="disconnect_pushButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>disconnect</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>400</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Device Settings</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_9">
+             <item row="13" column="1">
+              <widget class="QSpinBox" name="start_freq_spinBox">
+               <property name="suffix">
+                <string> Hz</string>
+               </property>
+               <property name="minimum">
+                <number>1000</number>
+               </property>
+               <property name="maximum">
+                <number>99000</number>
+               </property>
+               <property name="singleStep">
+                <number>1000</number>
+               </property>
+               <property name="value">
+                <number>3000</number>
+               </property>
+              </widget>
+             </item>
+             <item row="16" column="1">
+              <widget class="QSpinBox" name="settling_time_spinBox">
+               <property name="suffix">
+                <string> ms</string>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>9999</number>
+               </property>
+               <property name="value">
+                <number>100</number>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="1">
+              <widget class="QComboBox" name="fbr_comboBox">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>OFF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R1 20k</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R4 200R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R6 300R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R7 430R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R11 510R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R15 620R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R17 700R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R19 1k</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="QComboBox" name="gain_resistor_comboBox">
+               <property name="currentText">
+                <string>OFF</string>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>OFF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R53 20R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R54 50R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R55 100R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R56 200R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R44 510R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R46 910R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R50 1k</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R52 10k</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>PGA:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>Gain Resistor:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="15" column="1">
+              <widget class="QSpinBox" name="number_of_steps_spinBox_4">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>1000</number>
+               </property>
+               <property name="value">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_34">
+               <property name="text">
+                <string>Meas. 2 Cal1:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="12" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>FBR:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="13" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Start Freq:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_35">
+               <property name="text">
+                <string>Meas. 3 Cal2:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="14" column="1">
+              <widget class="QSpinBox" name="step_size_spinBox">
+               <property name="suffix">
+                <string> Hz</string>
+               </property>
+               <property name="minimum">
+                <number>100</number>
+               </property>
+               <property name="maximum">
+                <number>50000</number>
+               </property>
+               <property name="singleStep">
+                <number>100</number>
+               </property>
+               <property name="value">
+                <number>1000</number>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QComboBox" name="measure_1_comboBox_1">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>LEADS</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R67 100R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R69 200R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R71 300R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R73 1k</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R65 62R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R74/R72/C81 150R/75R/10nF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R70/R68/C79 150R/75R/15nF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R66/R64/C75 1k/560R/2.2nF</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="14" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Step Size:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QComboBox" name="pga_comboBox">
+               <item>
+                <property name="text">
+                 <string>1x</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>5x</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="measure_2_comboBox_1">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <property name="maxVisibleItems">
+                <number>10</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>LEADS</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R67 100R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R69 200R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R71 300R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R73 1k</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R65 62R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R74/R72/C81 150R/75R/10nF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R70/R68/C79 150R/75R/15nF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R66/R64/C75 1k/560R/2.2nF</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="11" column="1">
+              <widget class="QComboBox" name="output_voltage_comboBox">
+               <item>
+                <property name="text">
+                 <string>2.0 V p-p</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>200 mV p-p</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>400 mV p-p</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1.0 V p-p</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="15" column="0">
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Number of Steps:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="16" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>Settling Time:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QComboBox" name="measure_3_comboBox_1">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <item>
+                <property name="text">
+                 <string>LEADS</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R67 100R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R69 200R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R71 300R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R73 1k</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R65 62R</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R74/R72/C81 150R/75R/10nF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R70/R68/C79 150R/75R/15nF</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>R66/R64/C75 1k/560R/2.2nF</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_33">
+               <property name="text">
+                <string>Meas. 1 Plot:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="11" column="0">
+              <widget class="QLabel" name="label_32">
+               <property name="text">
+                <string>Output Voltage :</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QDoubleSpinBox" name="cal_resistor_doubleSpinBox">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="suffix">
+                <string> ohm</string>
+               </property>
+               <property name="minimum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>1000000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>300.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>Cal1 Resistor</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_36">
+               <property name="text">
+                <string>Cal2 Resistor</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QDoubleSpinBox" name="cal_resistor_doubleSpinBox_2">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="suffix">
+                <string> ohm</string>
+               </property>
+               <property name="minimum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>1000000.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>300.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Sweep Count:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <widget class="QSpinBox" name="sweep_count_spinBox">
+               <property name="value">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Sweep Parameters</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_14">
+             <item>
+              <widget class="QLabel" name="sweep_output">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QProgressBar" name="progressBar">
+               <property name="value">
+                <number>24</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>250</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Sweep Control</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_23">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_21">
+             <item row="0" column="1">
+              <widget class="QPushButton" name="stop_QPushButton">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000</width>
+                 <height>1000</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{color: red}</string>
+               </property>
+               <property name="text">
+                <string>Stop</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QPushButton" name="start_QPushButton">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>1000</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton { color: rgb(31, 206, 39)}</string>
+               </property>
+               <property name="text">
+                <string>Start</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>600</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Calibrated Output</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="PlotWidget" name="plot1_graphicsView">
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>250</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="toolTipDuration">
+                 <number>-2</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="PlotWidget" name="temp_graphicsView">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>90</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="statusTip">
+                 <string>Internal Device Temperature</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>Magnitude</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="1" column="0">
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="PlotWidget" name="raw_plot">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Raw Output</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_10">
+            <item row="1" column="0">
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="1" column="0">
+               <widget class="PlotWidget" name="plot2_graphicsView">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string>Raw Data</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_11">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QTextBrowser" name="raw_data_textBrowser"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_6">
+           <attribute name="title">
+            <string>Calibrated data</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_14">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="0">
+               <widget class="QTextBrowser" name="calibrated_data_textBrowser"/>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_3">
+           <attribute name="title">
+            <string>Temperature</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_27">
+            <item row="0" column="0">
+             <layout class="QGridLayout" name="gridLayout_26">
+              <item row="1" column="0">
+               <widget class="PlotWidget" name="input_plot">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>90</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>90</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <widget class="QLabel" name="label_8">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>17</height>
+             </size>
+            </property>
+            <property name="sizeIncrement">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="baseSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <italic>true</italic>
+              <bold>false</bold>
+              <underline>false</underline>
+             </font>
+            </property>
+            <property name="text">
+             <string>[Frequency, Real Leads, Imaginary Leads, Real Cal1, Imaginary Cal1, Real Cal2, Imaginary Cal2, Temp, Status]</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTextBrowser" name="bottom_textBrowser_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>45</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>75</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="minimumSize">
+           <size>
+            <width>260</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>260</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Data Managment</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_12">
+             <item>
+              <layout class="QGridLayout" name="gridLayout_22">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="maximumSize">
+                  <size>
+                   <width>317</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>File Path:</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="subject_id_lineEdit">
+               <property name="maximumSize">
+                <size>
+                 <width>317</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="inputMask">
+                <string/>
+               </property>
+               <property name="text">
+                <string>data/</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="save_data_button">
+               <property name="maximumSize">
+                <size>
+                 <width>317</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton { color: rgb(31, 206, 39)}</string>
+               </property>
+               <property name="text">
+                <string>Save Data</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>File for Cole Model:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_data_file_name"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cole_model_button">
+               <property name="font">
+                <font>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Generate Cole Model</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="minimumSize">
+           <size>
+            <width>260</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>260</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Device CLI</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_7">
+             <item>
+              <widget class="QLineEdit" name="command_line">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="placeholderText">
+                <string>Enter Command Here</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextBrowser" name="bottom_textBrowser">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>426</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="title">
+           <string>Plot Control</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_25">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_24">
+             <item row="0" column="0">
+              <widget class="QPushButton" name="clear_all_data">
+               <property name="maximumSize">
+                <size>
+                 <width>370</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{color: red}</string>
+               </property>
+               <property name="text">
+                <string>Clear Plots</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>start_QPushButton</sender>
+   <signal>objectNameChanged(QString)</signal>
+   <receiver>bottom_textBrowser</receiver>
+   <slot>insertPlainText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>148</x>
+     <y>76</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>696</x>
+     <y>667</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>command_line</sender>
+   <signal>returnPressed()</signal>
+   <receiver>bottom_textBrowser</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>766</x>
+     <y>631</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>750</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
