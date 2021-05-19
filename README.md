@@ -16,6 +16,11 @@ Qt5 Designer file:
 ispectro_xml.ui
 ```
 
+Persistent Settings:
+```
+config.ini
+```
+
 Generate pyQt5 Ui_MainWindow and QtBaseClass classes for python
 ```
 pyuic5 -x ispectro_xml.ui -o ispectro_xml.py
