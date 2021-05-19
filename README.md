@@ -30,3 +30,6 @@ Arduino Code for BIS Device
 ```
 firmware.ino
 ```
+
+![alt text](https://github.com/andrewallison2012/ispectro/blob/master/main_screen.png?raw=true)
+![alt text](https://github.com/andrewallison2012/ispectro/blob/master/cole_screen.png?raw=true)
