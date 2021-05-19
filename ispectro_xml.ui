@@ -959,7 +959,7 @@
           </widget>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
-            <string>Temperature</string>
+            <string>Misc</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_27">
             <item row="0" column="0">
