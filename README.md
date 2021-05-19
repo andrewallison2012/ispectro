@@ -31,5 +31,11 @@ Arduino Code for BIS Device
 firmware.ino
 ```
 
+KiCad Schematics for Device:
+```
+impedance_777/impedance_777_r1.pro
+```
+
+
 ![alt text](https://github.com/andrewallison2012/ispectro/blob/master/main_screen.png?raw=true)
 ![alt text](https://github.com/andrewallison2012/ispectro/blob/master/cole_screen.png?raw=true)
