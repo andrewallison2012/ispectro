@@ -1,5 +1,5 @@
 # Ispectro
-Opensource software for an Impedance Spectroscopy (BIS) Device based on Arduino.
+Open-source software for an Impedance Spectroscopy (BIS) Device based on Arduino.
 
 To in a venv install:
 ```
